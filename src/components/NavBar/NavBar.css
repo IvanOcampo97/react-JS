@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     background-color: bisque;
     color: brown;
 }
@@ -12,6 +12,7 @@
     padding: 10px;
     text-decoration: none;
     color: brown;
+    margin-top: 20px;
 }
 
 .nav a:hover{
