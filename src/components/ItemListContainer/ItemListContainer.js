@@ -1,24 +1,25 @@
 import React, { useEffect, useState } from 'react';
-import itemList from '../ItemList/ItemList';
+import { ItemList } from '../ItemList/ItemList';
 
-function productos() {
+
+function traerProductos(){
     const myPromise = new Promise((resolve, reject) => {
         const productList = [
             {id: '1', 
-            nombre: 'El señor de los anillos',
-            precio: '$300'
+            title: 'El señor de los anillos',
+            price: '$300'
             },
             {id: '2', 
-            nombre: 'Harry Potter',
-            precio: '$400'
+            title: 'Harry Potter',
+            price: '$400'
             },
             {id: '3', 
-            nombre: 'Crepusculo',
-            precio: '$500'
+            title: 'Crepusculo',
+            price: '$500'
             },
             {id: '4', 
-            nombre: 'El resplandor ',
-            precio: '$350'
+            title: 'El resplandor ',
+            price: '$350'
             }
         ];
         setTimeout(() => {
@@ -30,23 +31,20 @@ function productos() {
 
 function ItemListContainer ({ greeting }){
 
-
-
 const [productos, setProductos] = useState([]);
 
 useEffect(() =>{
-    productos()
+    traerProductos()
     .then(res =>{
         setProductos(res);
     })
 }, []);
 
 return (
-    <div>
-        <itemList items={productos}/>
-        {}
-    </div>
+    <>
+        <ItemList items={productos}/>
+    </>
 )
 }
 
-export default productos
+export default ItemListContainer

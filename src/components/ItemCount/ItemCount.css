@@ -4,6 +4,7 @@
     align-items: center;
 }
 .box{
+    margin: 5%;
     background-color: bisque;
     padding: 20px;
     width: 300px;

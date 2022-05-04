@@ -1,15 +1,14 @@
 import NavBar from "./components/NavBar/NavBar";
 import './App.css';
-import traerProductos from "./components/ItemListContainer/ItemListContainer";
-// import Counter from "./components/ItemCount/ItemCount";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 
 function App() {
   return (
     <div className="App">
    
     <NavBar />
-    <itemList  />
-    {/* <Counter initial={0} stock={5} /> */}
+    <ItemListContainer />
+
     </div>
   );
 }

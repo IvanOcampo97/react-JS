@@ -1,0 +1,12 @@
+.itemCard {
+    height: 300px;
+    width: 400px;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    box-shadow: grey 2px 2px 5px 2px;
+  }
+  .itemCountainer {
+    height: 400px;
+    width: 100%;
+    margin: 5%;
+  }
