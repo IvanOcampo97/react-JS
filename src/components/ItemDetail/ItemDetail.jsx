@@ -1,7 +1,7 @@
 import React from "react";
 import "./ItemDetail.css";
 
-export const ItemDetail = ({ id, title, price }) => {
+function ItemDetail ({ id, title, price }) {
   return (
     <div id={id} className="ItemDetailCard">
       <div className="imgDetailCard"></div>
@@ -12,3 +12,5 @@ export const ItemDetail = ({ id, title, price }) => {
     </div>
   );
 };
+
+export default ItemDetail

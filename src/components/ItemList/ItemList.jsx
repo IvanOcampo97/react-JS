@@ -2,7 +2,7 @@ import React from "react";
 import { Item } from "../Item/Item";
 import "./ItemList.css";
 
-export const ItemList = ({ items }) => {
+function ItemList  ({ items }) {
   return (
     <div className="itemList">
       {items.map((product) => {
@@ -14,3 +14,5 @@ export const ItemList = ({ items }) => {
     </div>
   );
 };
+
+export default ItemList
