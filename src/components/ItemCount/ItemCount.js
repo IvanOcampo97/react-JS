@@ -23,7 +23,7 @@ function Counter({ stock, initial }) {
         <p>{count}</p>
         <button onClick={() => botonSuma()}>+</button>
       </div>
-      <button className="botonCarrito">Agregar al carrito</button>
+      <button className="botonCarrito" onClick={() => (count <= stock ) && onAdd(count)}>Agregar al carrito</button>
     </div>
   );
 }
