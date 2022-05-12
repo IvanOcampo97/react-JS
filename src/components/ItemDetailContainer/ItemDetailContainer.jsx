@@ -4,7 +4,6 @@ import  ItemDetail  from "../ItemDetail/ItemDetail";
 import "./ItemDetailContainer.css";
 
 function traerProductos(id) {
-  
   const promesaProductos = new Promise((resolve, reject) => {
     const dataProductos = [
       { id: 1, category:"Libros", title: "Comic 1", price: "$300" },
@@ -21,12 +20,12 @@ function traerProductos(id) {
 
 }
 function ItemDetailContainer() {
-  const [Detail, setItemDetail] = useState({});
+  const [Detail, setItemDetail] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
 
-    traerProductos().then((res) => {
+    traerProductos(id).then((res) => {
       setItemDetail(res);
     });
   }, [id]);
