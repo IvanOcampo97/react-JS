@@ -11,9 +11,8 @@ function NavBar(props) {
         <li><NavLink to={'/category/libros'}>Libros</NavLink></li>
         <li><NavLink to={'/category/comics'}>Comics</NavLink></li>
         <li><NavLink to={'/category/revistas'}>Revistas</NavLink></li>
-        <a href="">
-          <CartWidget />
-        </a>
+        <NavLink to={'/cart'}> <CartWidget /> </NavLink>
+
       </ul>
     </>
   );
