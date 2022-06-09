@@ -1,0 +1,13 @@
+.bubble-remove {
+    background-color: brown;
+    border-radius: 100px;
+    padding: 5px;
+    display: inline-block;
+}
+
+.bubble-cantidad{
+    background-color:antiquewhite ;
+    border-radius: 100px;
+    padding: 5px;
+    display: inline-block;
+}

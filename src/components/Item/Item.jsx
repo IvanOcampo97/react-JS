@@ -1,18 +1,34 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Counter from "../ItemCount/ItemCount";
 import "./Item.css";
 import "../ItemDetailContainer/ItemDetailContainer"
+import Bubble from "../Bubble/Bubble";
 
-export const Item = ({ id, title, price }) => {
+function Item ({ id, title, price }) {
   return (
     <div className="itemContainer">
       <div className="itemCard">
-        <h1>{title}</h1>
-        <h2>{price}</h2>
-        <Link to={ "/item/" + id }><button>Ver Detalle</button></Link>
-        <Counter initial={0} stock={5} />
+        <h3>{title}</h3>
+        <h4>{price}</h4>
+        <Link to={ "/item/" + id }>
+          <button>
+            <span>Ver Detalle</span>
+          </button>
+        </Link>
+        <div className="bubble">
+          <Bubble>
+            <a class="fancy" href="#">
+              <span class="top-key"></span>
+              <span class="text">Agregar al carrito</span>
+              <span class="bottom-key-1"></span>
+              <span class="bottom-key-2"></span>
+            </a>
+          </Bubble>
+        </div>
+
       </div>
     </div>
   );
 };
+
+export default Item;

@@ -1,19 +1,21 @@
 import React, { useContext} from 'react';
 import { Link } from 'react-router-dom';
 import CartItem from '../CartItem/CartItem';
-import CartContext from '../store/cart-context';
+import  CartContext  from '../store/cart-context';
 
 function Cart() {
 
     const cartCtx = useContext(CartContext);
 
     return (
-        <div>
+        <div> 
             {cartCtx.products.map(p => <CartItem item={p} key={p.id}/>)}
-            {cartCtx.products.length !== 0 ? 
+            {cartCtx.length !== 0 ? 
             <div>
-                <p>Precio total: ${cartCtx.getTotalPrice()}</p>
-                <button>Terminar compra</button>
+                <br />
+                {`Total:  $ ${cartCtx.getTotalPrice()}`}
+                <br />
+                <Link to='/checkout'><button>Terminar compra</button></Link>
             </div> :
             <>
             <h2>No hay productos en el carrito</h2>

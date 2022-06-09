@@ -7,7 +7,7 @@ function NavBar(props) {
   return (
     <>
       <ul className="nav">
-        <Link to={'/'}>Bienvenido</Link>
+        <Link to={'/'}>Inicio</Link>
         <li><NavLink to={'/category/libros'}>Libros</NavLink></li>
         <li><NavLink to={'/category/comics'}>Comics</NavLink></li>
         <li><NavLink to={'/category/revistas'}>Revistas</NavLink></li>
